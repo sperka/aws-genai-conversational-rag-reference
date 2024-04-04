@@ -341,10 +341,13 @@ export class MonorepoProject extends MonorepoTsProject {
     this.recurseProjects(this, this.configureJest.bind(this));
     this.recurseProjects(this, this.configJsii.bind(this));
 
-    this.configUpgradeDependencies();
     this.configureVscode();
 
     super.synth();
+  }
+
+  postSynthesize(): void {
+    this.configUpgradeDependencies();
   }
 
   renderWorkflowSetup(_options?: javascript.RenderWorkflowSetupOptions | undefined): JobStep[] {
