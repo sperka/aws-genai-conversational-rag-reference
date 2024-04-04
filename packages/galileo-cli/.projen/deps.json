@@ -2,7 +2,6 @@
   "dependencies": [
     {
       "name": "@aws-sdk/types",
-      "version": "^3.535.0",
       "type": "build"
     },
     {
@@ -142,54 +141,34 @@
     },
     {
       "name": "@aws-sdk/client-cognito-identity-provider",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/client-s3",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/client-sfn",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/client-ssm",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/client-sts",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/credential-providers",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/lib-storage",
-      "version": "^3.535.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-sdk/protocol-http",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-sdk/querystring-parser",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-sdk/signature-v4",
       "type": "runtime"
     },
     {
       "name": "@aws-sdk/types",
-      "version": "^3.535.0",
       "type": "runtime"
     },
     {
@@ -230,6 +209,18 @@
     },
     {
       "name": "@smithy/property-provider",
+      "type": "runtime"
+    },
+    {
+      "name": "@smithy/protocol-http",
+      "type": "runtime"
+    },
+    {
+      "name": "@smithy/querystring-parser",
+      "type": "runtime"
+    },
+    {
+      "name": "@smithy/signature-v4",
       "type": "runtime"
     },
     {

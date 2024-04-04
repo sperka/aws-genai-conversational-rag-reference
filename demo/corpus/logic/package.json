@@ -24,11 +24,11 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-sdk/client-dynamodb": "3.535.0",
-    "@aws-sdk/client-s3": "3.535.0",
-    "@aws-sdk/client-sagemaker-runtime": "3.535.0",
-    "@aws-sdk/client-secrets-manager": "3.535.0",
-    "@aws-sdk/lib-dynamodb": "3.535.0",
+    "@aws-sdk/client-dynamodb": "3.540.0",
+    "@aws-sdk/client-s3": "3.540.0",
+    "@aws-sdk/client-sagemaker-runtime": "3.540.0",
+    "@aws-sdk/client-secrets-manager": "3.543.0",
+    "@aws-sdk/lib-dynamodb": "3.540.0",
     "@aws-sdk/types": "3.535.0",
     "@smithy/types": "2.12.0",
     "@types/async": "^3.2.24",
@@ -78,7 +78,7 @@
     "async": "^3.2.5",
     "dotenv": "^10.0.0",
     "fast-glob": "^3.3.2",
-    "langchain": "0.0.194",
+    "langchain": "0.1.31",
     "lodash": "^4.17.21",
     "node-fetch": "^2"
   },
