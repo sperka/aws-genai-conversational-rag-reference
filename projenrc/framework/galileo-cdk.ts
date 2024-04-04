@@ -15,7 +15,7 @@ export class GalileoCdk extends AwsCdkConstructLibrary {
       cdkVersion: VERSIONS.CDK,
       constructsVersion: VERSIONS.CONSTRUCTS,
       defaultReleaseBranch: DEFAULT_RELEASE_BRANCH,
-      jsiiVersion: '5.x',
+      jsiiVersion: '^5.2.0',
       packageManager: monorepo.package.packageManager,
       parent: monorepo,
       prettier: true,
@@ -37,6 +37,7 @@ export class GalileoCdk extends AwsCdkConstructLibrary {
         `@aws-sdk/client-sfn@^${VERSIONS.AWS_SDK}`,
         `@aws-sdk/lib-dynamodb@^${VERSIONS.AWS_SDK}`,
         `@aws-sdk/types@^${VERSIONS.AWS_SDK}`,
+        '@pnpm/logger',
         '@types/fs-extra',
       ],
       bundledDeps: [
