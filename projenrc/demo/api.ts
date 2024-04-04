@@ -58,7 +58,12 @@ export class Api {
       },
     });
     this.project.runtime.typescript!.package.addField('private', true);
-    this.project.runtime.python!.addDependency('python@>=3.10,<4.0');
+
+    // TODO: starting from PDK v0.23.14 this line would cause build error.
+    // TODO: introduce it back once https://github.com/aws/aws-pdk/issues/751 is fixed
+    // this.project.runtime.python!.addDependency('python@>=3.10,<4.0');
+    this.project.runtime.python!.addDependency('python@^3.10');
+
     this.project.runtime.python!.addDependency('certifi@^2023.5.7');
     this.project.runtime.python!.addDependency('urllib3@>=1.25.4,<1.27');
     this.project.runtime.python!.addDependency('typing_extensions@^4.7.1');
