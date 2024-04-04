@@ -188,6 +188,10 @@
       "type": "build"
     },
     {
+      "name": "vm-browserify",
+      "type": "build"
+    },
+    {
       "name": "webpack",
       "type": "build"
     },
