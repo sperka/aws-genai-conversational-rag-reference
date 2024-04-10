@@ -68,6 +68,7 @@ export class IdentityLayer extends Construct implements IIdentityLayer {
         userPoolId: this.userPoolId,
         username: adminUser.username!,
       });
+      adminUserAttachment.addDependency(this.adminGroup);
       adminUserAttachment.addDependency(adminUser);
     }
 
