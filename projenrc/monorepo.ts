@@ -223,8 +223,8 @@ export class MonorepoProject extends MonorepoTsProject {
         ...subprojects.filter((p) => Eslint.of(p) != null).map((p) => './' + path.relative(this.outdir, p.outdir)),
       ],
       'editor.codeActionsOnSave': {
-        'source.fixAll': true,
-        'source.organizeImports': false,
+        'source.fixAll': 'explicit',
+        'source.organizeImports': 'never',
       },
     });
   }
