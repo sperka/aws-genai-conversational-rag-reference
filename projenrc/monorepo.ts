@@ -147,6 +147,10 @@ export class MonorepoProject extends MonorepoTsProject {
 
     // patch release:mainline workflow by restoring poetry.locks to prevent git diff
     this.tasks.tryFind('unbump')?.exec("git ls-files -m | grep 'poetry.lock' | xargs git restore || exit 0;");
+
+    // TODO: temporarily this fixes versionbump-related issues
+    // https://github.com/projen/projen/releases/tag/v0.81.0 introduced breaking changes
+    this.package.addPackageResolutions('projen@0.80.20');
   }
 
   getVersionedDeps(project: Project): Set<string> {
@@ -249,6 +253,7 @@ export class MonorepoProject extends MonorepoTsProject {
       project.eslint.addRules({ 'import/no-cycle': 'error' });
 
       if (prettierOptions) {
+        project.eslint.addPlugins('prettier');
         project.eslint.addOverride({
           files: ['**/*.ts', '**/*.tsx'],
           rules: {

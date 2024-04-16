@@ -44,7 +44,7 @@
     },
     {
       "name": "@types/node",
-      "version": "^16",
+      "version": "^18",
       "type": "build"
     },
     {
@@ -58,25 +58,11 @@
       "type": "build"
     },
     {
-      "name": "aws-cdk-lib",
-      "version": "2.110.0",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "10.3.0",
-      "type": "build"
-    },
-    {
       "name": "esbuild",
       "type": "build"
     },
     {
       "name": "eslint-config-prettier",
-      "type": "build"
-    },
-    {
-      "name": "eslint-import-resolver-node",
       "type": "build"
     },
     {
@@ -132,16 +118,12 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^16",
-      "type": "build"
-    },
-    {
       "name": "prettier",
       "type": "build"
     },
     {
       "name": "projen",
+      "version": "^0.79.24",
       "type": "build"
     },
     {
@@ -247,7 +229,7 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "^2.110.0",
+      "version": "^2.137.0",
       "type": "peer"
     },
     {
@@ -257,17 +239,17 @@
     },
     {
       "name": "@aws-cdk/aws-cognito-identitypool-alpha",
-      "version": "^2.110.0-alpha.0",
+      "version": "^2.137.0-alpha.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-python-alpha",
-      "version": "^2.110.0-alpha.0",
+      "version": "^2.137.0-alpha.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-sagemaker-alpha",
-      "version": "^2.110.0-alpha.0",
+      "version": "^2.137.0-alpha.0",
       "type": "runtime"
     },
     {
