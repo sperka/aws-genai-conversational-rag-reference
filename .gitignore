@@ -66,5 +66,4 @@ oss-attribution
 !/demo/api/generated/libraries/README.md
 !/demo/api/generated/infrastructure/README.md
 !/.vscode/settings.json
-!/.ncurc.json
 !/pnpm-workspace.yaml
