@@ -31,6 +31,10 @@
       "type": "build"
     },
     {
+      "name": "@pnpm/logger",
+      "type": "build"
+    },
+    {
       "name": "@types/fs-extra",
       "type": "build"
     },
@@ -119,12 +123,12 @@
     },
     {
       "name": "jsii-rosetta",
-      "version": "5.x",
+      "version": "~5.4.0",
       "type": "build"
     },
     {
       "name": "jsii",
-      "version": "5.x",
+      "version": "~5.4.0",
       "type": "build"
     },
     {
