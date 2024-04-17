@@ -105,37 +105,30 @@
     },
     {
       "name": "@aws-sdk/client-dynamodb",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@aws-sdk/client-s3",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@aws-sdk/client-sagemaker-runtime",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@aws-sdk/client-secrets-manager",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@aws-sdk/lib-dynamodb",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@aws-sdk/types",
-      "version": "^3.451.0",
       "type": "peer"
     },
     {
       "name": "@smithy/types",
-      "version": "^2.5.0",
       "type": "peer"
     },
     {

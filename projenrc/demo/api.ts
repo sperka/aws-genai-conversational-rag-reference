@@ -2,7 +2,7 @@ import * as path from 'node:path';
 import { MonorepoTsProject, NxProject } from '@aws/pdk/monorepo';
 import { DocumentationFormat, Language, Library, ModelLanguage, TypeSafeApiProject } from '@aws/pdk/type-safe-api';
 import { TypeScriptProject } from 'projen/lib/typescript';
-import { DEFAULT_RELEASE_BRANCH, PROJECT_AUTHOR, VERSIONS } from '../constants';
+import { DEFAULT_RELEASE_BRANCH, PROJECT_AUTHOR } from '../constants';
 import { NodePackageManager, TypeScriptModuleResolution } from 'projen/lib/javascript';
 
 export interface ApiOptions {
@@ -105,7 +105,7 @@ export class Api {
       deps: [
         '@aws-lambda-powertools/logger',
         '@aws-lambda-powertools/tracer',
-        `@aws-sdk/client-cognito-identity-provider@^${VERSIONS.AWS_SDK}`,
+        '@aws-sdk/client-cognito-identity-provider',
         'jose',
         'nanoid',
         'node-cache',
