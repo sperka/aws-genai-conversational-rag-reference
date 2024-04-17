@@ -636,6 +636,12 @@ importers:
       website:
         specifier: 0.0.0
         version: link:../website
+      ws-api-typescript-handlers:
+        specifier: '*'
+        version: link:../ws-api/handlers/typescript
+      ws-api-typescript-infra:
+        specifier: '*'
+        version: link:../ws-api/generated/infrastructure/typescript
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.119
@@ -884,10 +890,10 @@ importers:
       web-vitals:
         specifier: ^3.4.0
         version: 3.4.0
-      wsApi-typescript-websocket-client:
+      ws-api-typescript-websocket-client:
         specifier: 0.0.0
         version: link:../ws-api/generated/libraries/typescript-websocket-client
-      wsApi-typescript-websocket-hooks:
+      ws-api-typescript-websocket-hooks:
         specifier: 0.0.0
         version: link:../ws-api/generated/libraries/typescript-websocket-hooks
     devDependencies:
@@ -1035,7 +1041,7 @@ importers:
 
   demo/ws-api/generated/infrastructure/typescript:
     dependencies:
-      wsApi-typescript-runtime:
+      ws-api-typescript-runtime:
         specifier: 0.0.0
         version: link:../../runtime/typescript
     devDependencies:
@@ -1109,7 +1115,7 @@ importers:
 
   demo/ws-api/generated/libraries/typescript-websocket-hooks:
     dependencies:
-      wsApi-typescript-websocket-client:
+      ws-api-typescript-websocket-client:
         specifier: '*'
         version: link:../typescript-websocket-client
     devDependencies:
@@ -1165,7 +1171,7 @@ importers:
 
   demo/ws-api/handlers/typescript:
     dependencies:
-      wsApi-typescript-runtime:
+      ws-api-typescript-runtime:
         specifier: 0.0.0
         version: link:../../generated/runtime/typescript
     devDependencies:

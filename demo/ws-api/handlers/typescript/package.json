@@ -1,5 +1,5 @@
 {
-  "name": "wsApi-typescript-handlers",
+  "name": "ws-api-typescript-handlers",
   "scripts": {
     "build": "npx projen build",
     "compile": "npx projen compile",
@@ -37,7 +37,7 @@
     "typescript": "*"
   },
   "dependencies": {
-    "wsApi-typescript-runtime": "0.0.0"
+    "ws-api-typescript-runtime": "0.0.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

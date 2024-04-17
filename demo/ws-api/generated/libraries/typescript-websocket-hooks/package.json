@@ -1,5 +1,5 @@
 {
-  "name": "wsApi-typescript-websocket-hooks",
+  "name": "ws-api-typescript-websocket-hooks",
   "scripts": {
     "build": "npx projen build",
     "compile": "npx projen compile",
@@ -26,7 +26,7 @@
     "react": "*"
   },
   "dependencies": {
-    "wsApi-typescript-websocket-client": "*"
+    "ws-api-typescript-websocket-client": "*"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

@@ -9,6 +9,8 @@ import { INTERCEPTOR_IAM_ACTIONS } from 'api-typescript-interceptors';
 import { OperationConfig } from 'api-typescript-runtime';
 import { ArnFormat, CfnJson, Duration, NestedStack, NestedStackProps, Reference, Stack, Token } from 'aws-cdk-lib';
 import { Cors } from 'aws-cdk-lib/aws-apigateway';
+import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers';
+import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { GeoRestriction } from 'aws-cdk-lib/aws-cloudfront';
 import { ITable } from 'aws-cdk-lib/aws-dynamodb';
 import { IVpc } from 'aws-cdk-lib/aws-ec2';
@@ -18,6 +20,7 @@ import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { ISecret } from 'aws-cdk-lib/aws-secretsmanager';
 import { NagSuppressions } from 'cdk-nag';
 import { Construct } from 'constructs';
+import { SendChatMessageFunction, WebSocketApi } from 'ws-api-typescript-infra';
 import { IIdentityLayer } from '../identity';
 
 export interface PresentationStackProps extends NestedStackProps, IIdentityLayer {
@@ -36,6 +39,7 @@ export interface PresentationStackProps extends NestedStackProps, IIdentityLayer
 export class PresentationStack extends NestedStack {
   readonly typesafeApi: TypeSafeApi;
   readonly website: StaticWebsite;
+  readonly wsApi: WebSocketApi;
 
   get apiEndpoint(): string {
     return this.typesafeApi.api.urlForPath();
@@ -151,6 +155,19 @@ export class PresentationStack extends NestedStack {
           integration: corpusApiIntegration,
         },
         ...props.apiIntegrations,
+      },
+    });
+
+    this.wsApi = new WebSocketApi(this, 'WsApi', {
+      authorizer: new WebSocketIamAuthorizer(),
+      description: 'Galileo WS Api',
+      integrations: {
+        sendChatMessage: {
+          integration: new WebSocketLambdaIntegration(
+            'SendChatMessage',
+            new SendChatMessageFunction(this, 'SendChatMessageLambda'),
+          ),
+        },
       },
     });
 

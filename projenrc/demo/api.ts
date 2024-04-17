@@ -86,7 +86,7 @@ export class Api {
     this.wsApiProject = new TypeSafeWebSocketApiProject({
       parent: monorepo,
       outdir: path.join(rootOutdir, 'ws-api'),
-      name: 'wsApi',
+      name: 'ws-api',
       model: {
         language: ModelLanguage.SMITHY,
         options: {

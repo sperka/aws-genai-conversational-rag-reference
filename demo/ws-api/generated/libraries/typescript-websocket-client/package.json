@@ -1,5 +1,5 @@
 {
-  "name": "wsApi-typescript-websocket-client",
+  "name": "ws-api-typescript-websocket-client",
   "scripts": {
     "build": "npx projen build",
     "compile": "npx projen compile",

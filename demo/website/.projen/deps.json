@@ -347,12 +347,12 @@
       "type": "runtime"
     },
     {
-      "name": "wsApi-typescript-websocket-client",
+      "name": "ws-api-typescript-websocket-client",
       "version": "0.0.0",
       "type": "runtime"
     },
     {
-      "name": "wsApi-typescript-websocket-hooks",
+      "name": "ws-api-typescript-websocket-hooks",
       "version": "0.0.0",
       "type": "runtime"
     }

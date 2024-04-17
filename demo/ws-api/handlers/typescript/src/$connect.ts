@@ -6,7 +6,7 @@ import {
   INTERCEPTORS,
   LoggingInterceptor,
   $PendingConnection,
-} from 'wsApi-typescript-runtime';
+} from 'ws-api-typescript-runtime';
 
 /**
  * Type-safe handler for the $connect event, invoked when a new client connects to the websocket

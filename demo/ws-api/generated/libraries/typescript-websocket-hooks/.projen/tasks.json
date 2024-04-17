@@ -52,7 +52,7 @@
           "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.clean-openapi-generated-code --code-path ."
         },
         {
-          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../../model/.api.json --output-path . --generator-dir typescript-websocket-hooks --src-dir src --tst-dir test --additional-properties \"npmName=wsApi-typescript-websocket-hooks,typescriptThreePlus=true,useSingleParameter=true,supportsES6=true\" --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-websocket-client-package-name\":\"wsApi-typescript-websocket-client\"}' --generate-alias-as-model"
+          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../../model/.api.json --output-path . --generator-dir typescript-websocket-hooks --src-dir src --tst-dir test --additional-properties \"npmName=ws-api-typescript-websocket-hooks,typescriptThreePlus=true,useSingleParameter=true,supportsES6=true\" --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-websocket-client-package-name\":\"ws-api-typescript-websocket-client\"}' --generate-alias-as-model"
         }
       ]
     },
@@ -115,13 +115,13 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/react,react,typescript,wsApi-typescript-websocket-client"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/react,react,typescript,ws-api-typescript-websocket-client"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/node @types/react constructs projen react typescript wsApi-typescript-websocket-client"
+          "exec": "pnpm update @types/node @types/react constructs projen react typescript ws-api-typescript-websocket-client"
         },
         {
           "exec": "npx projen"

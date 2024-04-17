@@ -52,7 +52,7 @@
           "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.clean-openapi-generated-code --code-path ."
         },
         {
-          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../../model/.api.json --output-path . --generator-dir typescript-async-cdk-infrastructure --src-dir src --tst-dir test --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-runtime-package-name\":\"wsApi-typescript-runtime\",\"x-relative-spec-path\":\"../assets/api.json\",\"x-handlers-python-module\":\"\",\"x-handlers-java-package\":\"\",\"x-handlers-typescript-asset-path\":\"../../../handlers/typescript/dist/lambda\",\"x-handlers-python-asset-path\":\"\",\"x-handlers-java-asset-path\":\"\",\"x-handlers-node-lambda-runtime-version\":\"NODEJS_18_X\",\"x-handlers-python-lambda-runtime-version\":\"\",\"x-handlers-java-lambda-runtime-version\":\"\"}' --generate-alias-as-model"
+          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../../model/.api.json --output-path . --generator-dir typescript-async-cdk-infrastructure --src-dir src --tst-dir test --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-runtime-package-name\":\"ws-api-typescript-runtime\",\"x-relative-spec-path\":\"../assets/api.json\",\"x-handlers-python-module\":\"\",\"x-handlers-java-package\":\"\",\"x-handlers-typescript-asset-path\":\"../../../handlers/typescript/dist/lambda\",\"x-handlers-python-asset-path\":\"\",\"x-handlers-java-asset-path\":\"\",\"x-handlers-node-lambda-runtime-version\":\"NODEJS_18_X\",\"x-handlers-python-lambda-runtime-version\":\"\",\"x-handlers-java-lambda-runtime-version\":\"\"}' --generate-alias-as-model"
         },
         {
           "exec": "mkdir -p assets"
@@ -127,7 +127,7 @@
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @types/aws-lambda @types/node aws-cdk-lib cdk-nag constructs projen typescript wsApi-typescript-runtime"
+          "exec": "pnpm update @aws/pdk @types/aws-lambda @types/node aws-cdk-lib cdk-nag constructs projen typescript ws-api-typescript-runtime"
         },
         {
           "exec": "npx projen"

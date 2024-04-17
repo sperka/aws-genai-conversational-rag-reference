@@ -52,7 +52,7 @@
       "type": "peer"
     },
     {
-      "name": "wsApi-typescript-runtime",
+      "name": "ws-api-typescript-runtime",
       "version": "0.0.0",
       "type": "runtime"
     }

@@ -101,7 +101,9 @@
     "sample-dataset": "0.0.0",
     "shorthash2": "^1.0.3",
     "uuid": "^9.0.0",
-    "website": "0.0.0"
+    "website": "0.0.0",
+    "ws-api-typescript-handlers": "*",
+    "ws-api-typescript-infra": "*"
   },
   "license": "Apache-2.0",
   "version": "0.0.0",

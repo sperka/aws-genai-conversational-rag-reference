@@ -32,7 +32,7 @@
       "type": "peer"
     },
     {
-      "name": "wsApi-typescript-websocket-client",
+      "name": "ws-api-typescript-websocket-client",
       "type": "runtime"
     }
   ],

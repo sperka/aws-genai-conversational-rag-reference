@@ -5,7 +5,7 @@ import {
   $DisconnectChainedLambdaHandlerFunction,
   INTERCEPTORS,
   LoggingInterceptor,
-} from 'wsApi-typescript-runtime';
+} from 'ws-api-typescript-runtime';
 
 /**
  * Type-safe handler for the $disconnect event, invoked when a client disconnects from the websocket

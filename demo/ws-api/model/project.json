@@ -1,5 +1,5 @@
 {
-  "name": "wsApi-model",
+  "name": "ws-api-model",
   "root": "demo/ws-api/model",
   "targets": {
     "default": {

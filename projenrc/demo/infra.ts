@@ -69,14 +69,21 @@ export class Infra {
         api.apiInterceptorsTs.package.packageName,
         api.project.infrastructure.typescript!.package.packageName,
         api.project.runtime.typescript!.package.packageName,
+
+        // wsApi
+        api.wsApiProject.infrastructure.typescript!.package.packageName,
+        api.wsApiProject.handlers.typescript!.package.packageName,
+
         // For lambdas to reuse logic in step function
         corpus.logic.package.packageName,
         ...extractPeerDeps(corpus.logic),
         galileoSdk.package.packageName,
         ...extractPeerDeps(galileoSdk),
         galileoCdkLib.package.packageName,
+        
         // Remove this if not using sample dataset
         sample.project.package.packageName,
+        
         website.project.package.packageName,
       ],
       devDeps: [

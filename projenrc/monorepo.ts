@@ -152,11 +152,15 @@ export class MonorepoProject extends MonorepoTsProject {
     // https://github.com/projen/projen/releases/tag/v0.81.0 introduced breaking changes
     this.package.addPackageResolutions('projen@0.80.20');
 
+    // TODO: adjust @aws-lambda-powertools v2 breaking changes
     this.package.addPackageResolutions(
       '@aws-lambda-powertools/logger@1.18.1',
       '@aws-lambda-powertools/metrics@1.18.1',
       '@aws-lambda-powertools/tracer@1.18.1',
     );
+
+    // PDK #761
+    this.npmrc.addConfig('link-workspace-packages', 'true');
   }
 
   getVersionedDeps(project: Project): Set<string> {

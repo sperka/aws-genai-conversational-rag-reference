@@ -71,7 +71,7 @@
           "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.clean-openapi-generated-code --code-path ."
         },
         {
-          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../model/.api.json --output-path . --generator-dir typescript-async-lambda-handlers --src-dir src --tst-dir test --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-runtime-package-name\":\"wsApi-typescript-runtime\"}' --generate-alias-as-model"
+          "exec": "npx --yes -p @aws/pdk@$AWS_PDK_VERSION type-safe-api.generate --generator typescript-fetch --spec-path ../../model/.api.json --output-path . --generator-dir typescript-async-lambda-handlers --src-dir src --tst-dir test --openapi-normalizer \"KEEP_ONLY_FIRST_TAG_IN_OPERATION=true\" --extra-vendor-extensions '{\"x-runtime-package-name\":\"ws-api-typescript-runtime\"}' --generate-alias-as-model"
         }
       ]
     },
@@ -175,7 +175,7 @@
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs esbuild eslint-import-resolver-typescript eslint-plugin-header eslint-plugin-import eslint jest jest-junit projen ts-jest typescript wsApi-typescript-runtime"
+          "exec": "pnpm update @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs esbuild eslint-import-resolver-typescript eslint-plugin-header eslint-plugin-import eslint jest jest-junit projen ts-jest typescript ws-api-typescript-runtime"
         },
         {
           "exec": "npx projen"
