@@ -1,6 +1,14 @@
 import * as path from 'node:path';
 import { MonorepoTsProject, NxProject } from '@aws/pdk/monorepo';
-import { DocumentationFormat, Language, Library, ModelLanguage, TypeSafeApiProject } from '@aws/pdk/type-safe-api';
+import {
+  DocumentationFormat,
+  Language,
+  Library,
+  ModelLanguage,
+  TypeSafeApiProject,
+  TypeSafeWebSocketApiProject,
+  WebSocketLibrary,
+} from '@aws/pdk/type-safe-api';
 import { TypeScriptProject } from 'projen/lib/typescript';
 import { DEFAULT_RELEASE_BRANCH, PROJECT_AUTHOR } from '../constants';
 import { NodePackageManager, TypeScriptModuleResolution } from 'projen/lib/javascript';
@@ -13,6 +21,7 @@ export interface ApiOptions {
 
 export class Api {
   public readonly project: TypeSafeApiProject;
+  public readonly wsApiProject: TypeSafeWebSocketApiProject;
   public readonly apiInterceptorsTs: TypeScriptProject;
 
   constructor(options: ApiOptions) {
@@ -58,7 +67,7 @@ export class Api {
       },
     });
     this.project.runtime.typescript!.package.addField('private', true);
-    
+
     // TODO: starting from PDK v0.23.14 this line would cause build error.
     // TODO: introduce it back once https://github.com/aws/aws-pdk/issues/751 is fixed
     // this.project.runtime.python!.addDependency('python@>=3.10,<4.0');
@@ -70,6 +79,32 @@ export class Api {
     // Initial build fails intermittency stating this file is missing, no sure why it is needed.
     // For now adding to commit so persists.
     this.project.runtime.python!.gitignore.include('README.md');
+
+    this.wsApiProject = new TypeSafeWebSocketApiProject({
+      parent: monorepo,
+      outdir: path.join(rootOutdir, 'ws-api'),
+      name: 'wsApi',
+      model: {
+        language: ModelLanguage.SMITHY,
+        options: {
+          smithy: {
+            serviceName: {
+              namespace: 'com.amazon',
+              serviceName: 'WsApi',
+            },
+          },
+        },
+      },
+      infrastructure: {
+        language: Language.TYPESCRIPT,
+      },
+      handlers: {
+        languages: [Language.TYPESCRIPT],
+      },
+      library: {
+        libraries: [WebSocketLibrary.TYPESCRIPT_WEBSOCKET_HOOKS],
+      },
+    });
 
     monorepo.vscode?.settings.addSetting(
       'smithyLsp.rootPath',

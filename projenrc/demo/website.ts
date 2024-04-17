@@ -49,7 +49,6 @@ export class Website {
         'react-markdown',
         'use-immer',
         'usehooks-ts',
-        api.project.library.typescriptReactQueryHooks!.package.packageName,
         galileoSdk.package.packageName,
       ],
       devDeps: [
@@ -75,6 +74,8 @@ export class Website {
         },
       },
       rewire: {},
+      typeSafeApis: [api.project],
+      typeSafeWebSocketApis: [api.wsApiProject],
     });
     this.project.tsconfig?.addInclude('src/**/*.tsx');
     this.project.addGitIgnore('public/api.html');

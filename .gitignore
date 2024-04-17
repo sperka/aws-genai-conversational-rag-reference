@@ -63,6 +63,10 @@ oss-attribution
 !/demo/api/generated/documentation/README.md
 !/demo/api/generated/libraries/README.md
 !/demo/api/generated/infrastructure/README.md
+!/demo/ws-api/generated/runtime/README.md
+!/demo/ws-api/generated/libraries/README.md
+!/demo/ws-api/handlers/README.md
+!/demo/ws-api/generated/infrastructure/README.md
 !/.vscode/settings.json
 !/pnpm-workspace.yaml
 !/.syncpackrc.json

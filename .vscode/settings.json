@@ -33,6 +33,7 @@
     "./demo/infra",
     "./demo/sample-dataset",
     "./demo/website",
+    "./demo/ws-api/handlers/typescript",
     "./packages/galileo-cdk",
     "./packages/galileo-cli",
     "./packages/galileo-sdk"
