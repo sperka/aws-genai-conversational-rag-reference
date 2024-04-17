@@ -16,13 +16,13 @@
   },
   "devDependencies": {
     "@aws/pdk": "*",
-    "@types/aws-lambda": "^8.10.119",
+    "@types/aws-lambda": "*",
     "@types/node": "^18",
     "aws-cdk-lib": "*",
     "cdk-nag": "*",
     "constructs": "*",
     "projen": "^0.79.24",
-    "typescript": "^5.2.2"
+    "typescript": "*"
   },
   "peerDependencies": {
     "@aws/pdk": "*",

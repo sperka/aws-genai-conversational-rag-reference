@@ -16,14 +16,14 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "@types/react": "^18.2.21",
+    "@types/react": "*",
     "constructs": "^10.0.0",
     "projen": "^0.79.24",
-    "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "react": "*",
+    "typescript": "*"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "*"
   },
   "dependencies": {
     "@tanstack/react-query": "^4"

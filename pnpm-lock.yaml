@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  '@aws-lambda-powertools/logger': 1.18.1
+  '@aws-lambda-powertools/metrics': 1.18.1
+  '@aws-lambda-powertools/tracer': 1.18.1
   '@aws/pdk': 0.23.31
   '@types/babel__traverse': 7.18.2
   '@zkochan/js-yaml': npm:js-yaml@4.1.0
@@ -186,7 +189,7 @@ importers:
         specifier: 0.23.31
         version: 0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
       '@types/aws-lambda':
-        specifier: ^8.10.119
+        specifier: '*'
         version: 8.10.119
       '@types/node':
         specifier: ^18
@@ -204,8 +207,8 @@ importers:
         specifier: 0.80.20
         version: 0.80.20(constructs@10.3.0)
       typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
+        specifier: '*'
+        version: 5.4.5
 
   demo/api/generated/libraries/typescript-react-query-hooks:
     dependencies:
@@ -217,7 +220,7 @@ importers:
         specifier: ^18
         version: 18.17.1
       '@types/react':
-        specifier: ^18.2.21
+        specifier: '*'
         version: 18.2.21
       constructs:
         specifier: 10.3.0
@@ -226,25 +229,25 @@ importers:
         specifier: 0.80.20
         version: 0.80.20(constructs@10.3.0)
       react:
-        specifier: ^18.2.0
+        specifier: '*'
         version: 18.2.0
       typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
+        specifier: '*'
+        version: 5.4.5
 
   demo/api/generated/runtime/typescript:
     dependencies:
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/tracer':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1
       '@types/aws-lambda':
-        specifier: ^8.10.119
+        specifier: '*'
         version: 8.10.119
     devDependencies:
       '@types/node':
@@ -257,17 +260,17 @@ importers:
         specifier: 0.80.20
         version: 0.80.20(constructs@10.3.0)
       typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
+        specifier: '*'
+        version: 5.4.5
 
   demo/api/interceptors/typescript:
     dependencies:
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/tracer':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1
       '@aws-sdk/client-cognito-identity-provider':
         specifier: ^3.556.0
         version: 3.556.0
@@ -360,11 +363,11 @@ importers:
   demo/corpus/logic:
     dependencies:
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/parameters':
         specifier: ^1.12.1
         version: 1.12.1
@@ -508,11 +511,11 @@ importers:
         specifier: ^2.137.0-alpha.0
         version: 2.137.0-alpha.0(aws-cdk-lib@2.137.0)(constructs@10.3.0)
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/parameters':
         specifier: ^1.12.1
         version: 1.12.1
@@ -1132,14 +1135,14 @@ importers:
   demo/ws-api/generated/runtime/typescript:
     dependencies:
       '@aws-lambda-powertools/logger':
-        specifier: '*'
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: '*'
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/tracer':
-        specifier: '*'
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1
       '@aws-sdk/client-apigatewaymanagementapi':
         specifier: '*'
         version: 3.556.0
@@ -1227,11 +1230,11 @@ importers:
         specifier: ^2.137.0-alpha.0
         version: 2.137.0-alpha.0(aws-cdk-lib@2.137.0)(constructs@10.3.0)
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/parameters':
         specifier: ^1.12.1
         version: 1.12.1
@@ -1610,11 +1613,11 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       '@aws-lambda-powertools/logger':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/metrics':
-        specifier: ^1.12.1
-        version: 1.12.1
+        specifier: 1.18.1
+        version: 1.18.1(@middy/core@4.6.1)
       '@aws-lambda-powertools/parameters':
         specifier: ^1.12.1
         version: 1.12.1
@@ -2010,17 +2013,33 @@ packages:
     resolution: {integrity: sha512-VChNfDUxxcB5KTfQPkJgxYihEZkrmeOzU9/A9FRBc+3v33EEM59T2pIgBkFy0VoINvGi3MoBEln/wyu2jV0ivA==}
     dev: false
 
-  /@aws-lambda-powertools/logger@1.12.1:
-    resolution: {integrity: sha512-QMBkd6/rN2MniiNcWeCigT4AKqH+NG1X6xN8S+YLszd4qJvXvRqx2EBO01WVrtyctOE8IpLqxicevmw1cJqDIA==}
+  /@aws-lambda-powertools/commons@1.18.1:
+    resolution: {integrity: sha512-gFRgQ2GJDghKvf+fXvT0kQVftgOT05W+hCa7RkfZj6HSjVAO+9DZZeJL3JK1HcsLAjWRj7W9ra0/MqB3Abf+PQ==}
+    dev: false
+
+  /@aws-lambda-powertools/logger@1.18.1(@middy/core@4.6.1):
+    resolution: {integrity: sha512-GsSMqaFXCSz+llSOn2CVNMoN+j/jNsS6JP2Opy9myU0tvg7PeuU3+rN24vKyibUwpxM466IzWFBSJkYdm0bqVw==}
+    peerDependencies:
+      '@middy/core': '>=3.x'
+    peerDependenciesMeta:
+      '@middy/core':
+        optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.12.1
+      '@aws-lambda-powertools/commons': 1.18.1
+      '@middy/core': 4.6.1
       lodash.merge: 4.6.2
     dev: false
 
-  /@aws-lambda-powertools/metrics@1.12.1:
-    resolution: {integrity: sha512-tdwZBrpm7ouzWe1fWP8dzzuyGI7S1j3kAyXGvIOTQMbQEhN/kkSLohZJyfbpnTT10jLv3ozkgff6ZnWw6mX7fA==}
+  /@aws-lambda-powertools/metrics@1.18.1(@middy/core@4.6.1):
+    resolution: {integrity: sha512-ebojjuoOlm0bOtZ6H5fyTnC5B0owVX1nNqDUPEQSejkeiiBW0m6DVzy6hFWuKmGtBtm2WNnWwTE//WtF+CD6Ug==}
+    peerDependencies:
+      '@middy/core': '>=3.x'
+    peerDependenciesMeta:
+      '@middy/core':
+        optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.12.1
+      '@aws-lambda-powertools/commons': 1.18.1
+      '@middy/core': 4.6.1
     dev: false
 
   /@aws-lambda-powertools/parameters@1.12.1:
@@ -2030,11 +2049,16 @@ packages:
       '@aws-sdk/util-base64-node': 3.209.0
     dev: false
 
-  /@aws-lambda-powertools/tracer@1.12.1:
-    resolution: {integrity: sha512-ehaa9JzAfNvoHTbqv/bbu+cJD9RZXPEh22g47vMyQ2qg5e3Xe8wyzecFU35rHLlys9CV3SGLuazlyaTc5K3zmA==}
+  /@aws-lambda-powertools/tracer@1.18.1:
+    resolution: {integrity: sha512-bMLBtdEFNmLUR9RJvBULR6XJD0XopUhhS1mlpeQlm2BCPIN3gLbqAlJK8dMXyAw8GCpLpHaziCo2+7a/AIh7lA==}
+    peerDependencies:
+      '@middy/core': '>=3.x'
+    peerDependenciesMeta:
+      '@middy/core':
+        optional: true
     dependencies:
-      '@aws-lambda-powertools/commons': 1.12.1
-      aws-xray-sdk-core: 3.5.1
+      '@aws-lambda-powertools/commons': 1.18.1
+      aws-xray-sdk-core: 3.6.0
     dev: false
 
   /@aws-northstar/ui@1.1.7(@cloudscape-design/components@3.0.381)(@types/react-dom@18.2.7)(@types/react-router-dom@5.3.3)(@types/react@18.2.21)(react-dom@18.2.0)(react-router-dom@6.15.0)(react@18.2.0):
@@ -3420,14 +3444,6 @@ packages:
       '@smithy/util-config-provider': 2.3.0
       '@smithy/util-middleware': 2.2.0
       tslib: 2.6.2
-
-  /@aws-sdk/service-error-classification@3.374.0:
-    resolution: {integrity: sha512-7vFs0+zrP7Ni/t/e5kU/qZyLi7kRR375QWwvoR2ie3lD7cPAa+84IZqzKfcAkL2305Byb4RQrhogrsUh7ts9TA==}
-    engines: {node: '>=14.0.0'}
-    deprecated: This package has moved to @smithy/service-error-classification
-    dependencies:
-      '@smithy/service-error-classification': 1.1.0
-    dev: false
 
   /@aws-sdk/signature-v4-multi-region@3.556.0:
     resolution: {integrity: sha512-bWDSK0ggK7QzAOmPZGv29UAIZocL1MNY7XyOvm3P3P1U3tFMoIBilQQBLabXyHoZ9J3Ik0Vv4n95htUhRQ35ow==}
@@ -8500,11 +8516,6 @@ packages:
       '@smithy/types': 2.12.0
       tslib: 2.6.2
 
-  /@smithy/service-error-classification@1.1.0:
-    resolution: {integrity: sha512-OCTEeJ1igatd5kFrS2VDlYbainNNpf7Lj1siFOxnRWqYOP9oNvC5HOJBd3t+Z8MbrmehBtuDJ2QqeBsfeiNkww==}
-    engines: {node: '>=14.0.0'}
-    dev: false
-
   /@smithy/service-error-classification@2.0.6:
     resolution: {integrity: sha512-fCQ36frtYra2fqY2/DV8+3/z2d0VB/1D1hXbjRcM5wkxTToxq6xHbIY/NGGY6v4carskMyG8FHACxgxturJ9Pg==}
     engines: {node: '>=14.0.0'}
@@ -12450,12 +12461,12 @@ packages:
       uuid: 8.0.0
       xml2js: 0.5.0
 
-  /aws-xray-sdk-core@3.5.1:
-    resolution: {integrity: sha512-Q3S+K/UkDw/M9NnRZbyXNXsjB3amsv+6XhPdomtfzAdyNkf6q+GOQVuWpaLGHunBz91VzpGBzP9Qg0/elm6Cwg==}
+  /aws-xray-sdk-core@3.6.0:
+    resolution: {integrity: sha512-+UnYmVEni9NNJvE6aFY1dbvMtFquXSYAj+HYfm+90icoGKYvvLD71R7PHyFFnYct5of4NFpEXJtUJrWMv8e4mQ==}
     engines: {node: '>= 14.x'}
     dependencies:
-      '@aws-sdk/service-error-classification': 3.374.0
       '@aws-sdk/types': 3.535.0
+      '@smithy/service-error-classification': 2.1.5
       '@types/cls-hooked': 4.3.4
       atomic-batcher: 1.0.2
       cls-hooked: 4.2.2
@@ -14834,7 +14845,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240416
+      typescript: 5.5.0-dev.20240417
     dev: true
 
   /drange@1.1.1:
@@ -26354,8 +26365,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240416:
-    resolution: {integrity: sha512-hCCgs0+M5vvB2c/G6ft9IBNjbsjd/VL7+pSJMxGJcDjWP/FI+1n6qSLL3hNduxkfbzFh4jL75tbSqJp/Ac0V1Q==}
+  /typescript@5.5.0-dev.20240417:
+    resolution: {integrity: sha512-BjMYWxzDLRaNlnnMC/NHf0uUIZEnw5VLe7q0h7hEi5Q4H1XoIDdjBjk6stBS2nj6R/HrsdEqhWdPz6+DLx+sRw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true

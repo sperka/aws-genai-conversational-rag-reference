@@ -101,6 +101,9 @@
   },
   "pnpm": {
     "overrides": {
+      "@aws-lambda-powertools/logger": "1.18.1",
+      "@aws-lambda-powertools/metrics": "1.18.1",
+      "@aws-lambda-powertools/tracer": "1.18.1",
       "@aws/pdk": "0.23.31",
       "@types/babel__traverse": "7.18.2",
       "@zkochan/js-yaml": "npm:js-yaml@4.1.0",

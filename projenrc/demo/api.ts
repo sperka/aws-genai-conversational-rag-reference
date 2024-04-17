@@ -11,7 +11,7 @@ import {
 } from '@aws/pdk/type-safe-api';
 import { TypeScriptProject } from 'projen/lib/typescript';
 import { DEFAULT_RELEASE_BRANCH, PROJECT_AUTHOR } from '../constants';
-import { NodePackageManager, TypeScriptModuleResolution } from 'projen/lib/javascript';
+import { NodePackageManager, TypeScriptJsxMode, TypeScriptModuleResolution } from 'projen/lib/javascript';
 
 export interface ApiOptions {
   readonly monorepo: MonorepoTsProject;
@@ -50,17 +50,6 @@ export class Api {
       },
       library: {
         libraries: [Library.TYPESCRIPT_REACT_QUERY_HOOKS],
-        options: {
-          typescriptReactQueryHooks: {
-            tsconfig: {
-              compilerOptions: {
-                module: 'ES6',
-                target: 'ES6',
-                moduleResolution: TypeScriptModuleResolution.NODE,
-              },
-            },
-          },
-        },
       },
       documentation: {
         formats: [DocumentationFormat.HTML2],
@@ -79,6 +68,20 @@ export class Api {
     // Initial build fails intermittency stating this file is missing, no sure why it is needed.
     // For now adding to commit so persists.
     this.project.runtime.python!.gitignore.include('README.md');
+
+    // override tsconfig and tsconfig.dev for typescriptReactQueryHooks
+    // TODO: report pdk bug https://github.com/aws/aws-pdk/blob/mainline/packages/type-safe-api/src/project/codegen/library/typescript-react-query-hooks-library.ts#L25
+    [
+      this.project.library.typescriptReactQueryHooks?.tryFindObjectFile('tsconfig.json'),
+      this.project.library.typescriptReactQueryHooks?.tryFindObjectFile('tsconfig.dev.json'),
+    ].forEach((objectFile) => {
+      objectFile?.addOverride('compilerOptions.lib', ['dom', 'ES2019']);
+      objectFile?.addOverride('compilerOptions.skipLibCheck', true);
+      objectFile?.addOverride('compilerOptions.target', 'ES2019');
+      objectFile?.addOverride('compilerOptions.module', 'CommonJS');
+      objectFile?.addOverride('compilerOptions.moduleResolution', TypeScriptModuleResolution.NODE);
+      objectFile?.addOverride('compilerOptions.jsx', TypeScriptJsxMode.REACT_JSX);
+    });
 
     this.wsApiProject = new TypeSafeWebSocketApiProject({
       parent: monorepo,

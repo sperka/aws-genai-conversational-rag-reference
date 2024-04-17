@@ -203,6 +203,21 @@
       "type": "build"
     },
     {
+      "name": "@aws-lambda-powertools/logger",
+      "version": "1.18.1",
+      "type": "override"
+    },
+    {
+      "name": "@aws-lambda-powertools/metrics",
+      "version": "1.18.1",
+      "type": "override"
+    },
+    {
+      "name": "@aws-lambda-powertools/tracer",
+      "version": "1.18.1",
+      "type": "override"
+    },
+    {
       "name": "@aws/pdk",
       "version": "0.23.31",
       "type": "override"
