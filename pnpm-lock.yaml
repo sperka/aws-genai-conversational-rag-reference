@@ -8,7 +8,7 @@ overrides:
   '@aws-lambda-powertools/logger': 1.18.1
   '@aws-lambda-powertools/metrics': 1.18.1
   '@aws-lambda-powertools/tracer': 1.18.1
-  '@aws/pdk': 0.23.31
+  '@aws/pdk': 0.23.33
   '@types/babel__traverse': 7.18.2
   '@zkochan/js-yaml': npm:js-yaml@4.1.0
   aws-cdk-lib: 2.137.0
@@ -35,8 +35,8 @@ importers:
         version: 2.27.147(aws-cdk-lib@2.137.0)(constructs@10.3.0)
     devDependencies:
       '@aws/pdk':
-        specifier: 0.23.31
-        version: 0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.110.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
+        specifier: 0.23.33
+        version: 0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.110.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
       '@commitlint/cli':
         specifier: ^17.7.2
         version: 17.7.2
@@ -186,8 +186,8 @@ importers:
         version: link:../../runtime/typescript
     devDependencies:
       '@aws/pdk':
-        specifier: 0.23.31
-        version: 0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
+        specifier: 0.23.33
+        version: 0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
       '@types/aws-lambda':
         specifier: '*'
         version: 8.10.119
@@ -559,8 +559,8 @@ importers:
         specifier: 0.0.0
         version: link:../../packages/galileo-sdk
       '@aws/pdk':
-        specifier: 0.23.31
-        version: 0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.137.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
+        specifier: 0.23.33
+        version: 0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.137.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
       '@middy/core':
         specifier: ^4.6.1
         version: 4.6.1
@@ -3665,8 +3665,8 @@ packages:
       '@smithy/types': 2.12.0
       tslib: 2.6.2
 
-  /@aws/pdk@0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
-    resolution: {integrity: sha512-fu5Nf/ISo0zvfoxs6ql3NVCb9tBsZpAirwOKMyMvjE3B+rp836mlghfjEsJ5wc50TqyGBOCoef8DihHyNLZF6Q==}
+  /@aws/pdk@0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
+    resolution: {integrity: sha512-/o7bEbES1t7Y8skDBGBxafOlQ/izRxT5IGJfpi3tT9BRgJTIGJRd1ze0WS/BhCsUd/J6/aTsFW6MfDG9XFlWqA==}
     hasBin: true
     peerDependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0
@@ -3712,8 +3712,8 @@ packages:
       - ts-node
       - word-wrap
 
-  /@aws/pdk@0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.110.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
-    resolution: {integrity: sha512-fu5Nf/ISo0zvfoxs6ql3NVCb9tBsZpAirwOKMyMvjE3B+rp836mlghfjEsJ5wc50TqyGBOCoef8DihHyNLZF6Q==}
+  /@aws/pdk@0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.110.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
+    resolution: {integrity: sha512-/o7bEbES1t7Y8skDBGBxafOlQ/izRxT5IGJfpi3tT9BRgJTIGJRd1ze0WS/BhCsUd/J6/aTsFW6MfDG9XFlWqA==}
     hasBin: true
     peerDependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0
@@ -3759,8 +3759,8 @@ packages:
       - ts-node
       - word-wrap
 
-  /@aws/pdk@0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.137.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
-    resolution: {integrity: sha512-fu5Nf/ISo0zvfoxs6ql3NVCb9tBsZpAirwOKMyMvjE3B+rp836mlghfjEsJ5wc50TqyGBOCoef8DihHyNLZF6Q==}
+  /@aws/pdk@0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.137.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20):
+    resolution: {integrity: sha512-/o7bEbES1t7Y8skDBGBxafOlQ/izRxT5IGJfpi3tT9BRgJTIGJRd1ze0WS/BhCsUd/J6/aTsFW6MfDG9XFlWqA==}
     hasBin: true
     peerDependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0

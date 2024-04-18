@@ -42,7 +42,7 @@
     "galileo-cli": "pnpm dlx tsx packages/galileo-cli/bin/galileo-cli.ts"
   },
   "devDependencies": {
-    "@aws/pdk": "0.23.31",
+    "@aws/pdk": "0.23.33",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@nrwl/devkit": "^16.9.1",
@@ -104,7 +104,7 @@
       "@aws-lambda-powertools/logger": "1.18.1",
       "@aws-lambda-powertools/metrics": "1.18.1",
       "@aws-lambda-powertools/tracer": "1.18.1",
-      "@aws/pdk": "0.23.31",
+      "@aws/pdk": "0.23.33",
       "@types/babel__traverse": "7.18.2",
       "@zkochan/js-yaml": "npm:js-yaml@4.1.0",
       "aws-cdk-lib": "2.137.0",

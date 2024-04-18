@@ -9,7 +9,7 @@
     "inlineSources": true,
     "lib": [
       "dom",
-      "es2019"
+      "ES2019"
     ],
     "module": "CommonJS",
     "noEmitOnError": false,
@@ -25,7 +25,9 @@
     "strictPropertyInitialization": false,
     "stripInternal": true,
     "target": "ES2019",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*.ts",

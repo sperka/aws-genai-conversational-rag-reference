@@ -158,9 +158,6 @@ export class MonorepoProject extends MonorepoTsProject {
       '@aws-lambda-powertools/metrics@1.18.1',
       '@aws-lambda-powertools/tracer@1.18.1',
     );
-
-    // PDK #761
-    this.npmrc.addConfig('link-workspace-packages', 'true');
   }
 
   getVersionedDeps(project: Project): Set<string> {

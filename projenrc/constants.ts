@@ -23,6 +23,6 @@ export const DEMO_APPLICATION_NAME = 'Galileo';
 export const VERSIONS = {
   CDK: '2.137.0',
   CONSTRUCTS: '10.3.0',
-  PDK: '0.23.31',
+  PDK: '0.23.33',
   LANGCHAIN: '0.0.194', // Not semver yet so need to pin version
 } as const;

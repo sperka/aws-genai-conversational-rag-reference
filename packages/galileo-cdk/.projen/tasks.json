@@ -242,9 +242,6 @@
       "description": "Creates the distribution package",
       "steps": [
         {
-          "exec": "monorepo.pnpm-link-bundled-transitive-deps packages/galileo-cdk"
-        },
-        {
           "spawn": "eslint"
         }
       ]
