@@ -9,7 +9,7 @@ import { INTERCEPTOR_IAM_ACTIONS } from 'api-typescript-interceptors';
 import { OperationConfig } from 'api-typescript-runtime';
 import { ArnFormat, CfnJson, Duration, NestedStack, NestedStackProps, Reference, Stack, Token } from 'aws-cdk-lib';
 import { Cors } from 'aws-cdk-lib/aws-apigateway';
-import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers';
+import { WebSocketLambdaAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers';
 import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { GeoRestriction } from 'aws-cdk-lib/aws-cloudfront';
 import { ITable } from 'aws-cdk-lib/aws-dynamodb';
@@ -36,6 +36,8 @@ export interface PresentationStackProps extends NestedStackProps, IIdentityLayer
   readonly foundationModelInventorySecret: ISecret;
 }
 
+const NODE_RUNTIME = Runtime.NODEJS_20_X;
+
 export class PresentationStack extends NestedStack {
   readonly typesafeApi: TypeSafeApi;
   readonly website: StaticWebsite;
@@ -54,24 +56,24 @@ export class PresentationStack extends NestedStack {
 
     const listChatsFn = new NodejsFunction(this, `listChats-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/listChats'),
     });
     const createChatFn = new NodejsFunction(this, `createChat-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/createChat'),
     });
 
     const updateChatFn = new NodejsFunction(this, `updateChat-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/updateChat'),
     });
 
     const deleteChatFn = new NodejsFunction(this, `deleteChat-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/deleteChat'),
       // TODO: need to optimize how dependent entities are deletes to be bulk (sources + messages)
       // until then just setting this to 60s timeout
@@ -80,25 +82,25 @@ export class PresentationStack extends NestedStack {
 
     const listChatMessagesFn = new NodejsFunction(this, `listChatMessages-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/listChatMessages'),
     });
 
     const deleteChatMessageFn = new NodejsFunction(this, `deleteChatMessage-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/deleteChatMessage'),
     });
 
     const listChatMessageSourcesFn = new NodejsFunction(this, `listChatMessageSources-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/chat/listChatMessageSources'),
     });
 
     const llmInventoryFn = new NodejsFunction(this, `llmInventory-Lambda`, {
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: NODE_RUNTIME,
       entry: require.resolve('./lambdas/llm/inventory'),
       environment: {
         [FOUNDATION_MODEL_INVENTORY_SECRET]: props.foundationModelInventorySecret.secretName,
@@ -158,8 +160,20 @@ export class PresentationStack extends NestedStack {
       },
     });
 
+    const webSocketAuthFn = new NodejsFunction(this, `WsAuthorizer`, {
+      handler: 'handler',
+      runtime: NODE_RUNTIME,
+      entry: require.resolve('./lambdas/websocket/authorizer'),
+      environment: {
+        USER_POOL_ID: props.userPoolId,
+        CLIENT_ID: props.userPoolWebClientId,
+      },
+    });
+
     this.wsApi = new WebSocketApi(this, 'WsApi', {
-      authorizer: new WebSocketIamAuthorizer(),
+      authorizer: new WebSocketLambdaAuthorizer('Authorizer', webSocketAuthFn, {
+        identitySource: ['route.request.querystring.authToken'],
+      }),
       description: 'Galileo WS Api',
       integrations: {
         sendChatMessage: {
@@ -254,6 +268,7 @@ export class PresentationStack extends NestedStack {
           identityPoolId: props.identityPoolId,
           userPoolId: props.userPoolId,
           userPoolWebClientId: props.userPoolWebClientId,
+          wsApiUrl: this.wsApi.defaultStage.url,
           ...props.runtimeConfigs,
         }),
       },

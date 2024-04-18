@@ -597,6 +597,12 @@ importers:
       aws-cdk-lib:
         specifier: 2.137.0
         version: 2.137.0(constructs@10.3.0)
+      aws-jwt-verify:
+        specifier: '*'
+        version: 4.0.1
+      aws-lambda:
+        specifier: '*'
+        version: 1.0.7
       case:
         specifier: ^1.6.3
         version: 1.6.3
@@ -673,9 +679,6 @@ importers:
       aws-cdk:
         specifier: ^2.137.0
         version: 2.137.0
-      aws-lambda:
-        specifier: ^1.0.7
-        version: 1.0.7
       aws-sdk:
         specifier: ^2.1453.0
         version: 2.1453.0
@@ -1046,8 +1049,8 @@ importers:
         version: link:../../runtime/typescript
     devDependencies:
       '@aws/pdk':
-        specifier: 0.23.31
-        version: 0.23.31(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
+        specifier: 0.23.33
+        version: 0.23.33(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.137.0)(cdk-nag@2.27.147)(constructs@10.3.0)(projen@0.80.20)
       '@types/aws-lambda':
         specifier: '*'
         version: 8.10.119
@@ -12419,6 +12422,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /aws-jwt-verify@4.0.1:
+    resolution: {integrity: sha512-kzvi71eD3w/mCpYRUY7cz6DX4bfYihGdI2yV3FYQ2JuZZenqAqDPz0gWj0ew6vlAtdEVBNb7p+Dm2TAIxpVYMA==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /aws-lambda@1.0.7:
     resolution: {integrity: sha512-9GNFMRrEMG5y3Jvv+V4azWvc+qNWdWLTjDdhf/zgMlz8haaaLWv0xeAIWxz9PuWUBawsVxy0zZotjCdR3Xq+2w==}
