@@ -3,7 +3,7 @@ namespace com.amazon
 
 
 @async(direction: "client_to_server")
-@handler(language: "typescript")
+// @handler(language: "typescript")
 operation SendChatMessage {
     input := {
         @required
