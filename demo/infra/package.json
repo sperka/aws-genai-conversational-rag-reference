@@ -59,8 +59,8 @@
   "dependencies": {
     "@aws-cdk/aws-cognito-identitypool-alpha": "^2.137.0-alpha.0",
     "@aws-cdk/aws-lambda-python-alpha": "^2.137.0-alpha.0",
-    "@aws-lambda-powertools/logger": "^1.12.1",
-    "@aws-lambda-powertools/metrics": "^1.12.1",
+    "@aws-lambda-powertools/logger": "1.18.1",
+    "@aws-lambda-powertools/metrics": "1.18.1",
     "@aws-lambda-powertools/parameters": "^1.12.1",
     "@aws-sdk/client-codebuild": "^3.556.0",
     "@aws-sdk/client-dynamodb": "^3.556.0",
@@ -104,7 +104,8 @@
     "uuid": "^9.0.0",
     "website": "0.0.0",
     "ws-api-typescript-handlers": "*",
-    "ws-api-typescript-infra": "*"
+    "ws-api-typescript-infra": "*",
+    "ws-api-typescript-runtime": "*"
   },
   "license": "Apache-2.0",
   "version": "0.0.0",

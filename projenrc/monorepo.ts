@@ -153,6 +153,7 @@ export class MonorepoProject extends MonorepoTsProject {
     this.package.addPackageResolutions('projen@0.80.20');
 
     // TODO: adjust @aws-lambda-powertools v2 breaking changes
+    // now fixing to 1.x
     this.package.addPackageResolutions(
       '@aws-lambda-powertools/logger@1.18.1',
       '@aws-lambda-powertools/metrics@1.18.1',

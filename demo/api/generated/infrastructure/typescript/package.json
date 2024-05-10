@@ -15,20 +15,20 @@
     "watch": "npx projen watch"
   },
   "devDependencies": {
-    "@aws/pdk": "*",
+    "@aws/pdk": "0.23.33",
     "@types/aws-lambda": "*",
     "@types/node": "^18",
-    "aws-cdk-lib": "*",
+    "aws-cdk-lib": "2.137.0",
     "cdk-nag": "*",
-    "constructs": "*",
+    "constructs": "10.3.0",
     "projen": "^0.79.24",
     "typescript": "*"
   },
   "peerDependencies": {
-    "@aws/pdk": "*",
-    "aws-cdk-lib": "*",
+    "@aws/pdk": "0.23.33",
+    "aws-cdk-lib": "2.137.0",
     "cdk-nag": "*",
-    "constructs": "*"
+    "constructs": "10.3.0"
   },
   "dependencies": {
     "api-typescript-runtime": "0.0.0"

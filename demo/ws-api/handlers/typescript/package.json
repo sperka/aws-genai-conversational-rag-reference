@@ -19,6 +19,8 @@
     "watch": "npx projen watch"
   },
   "devDependencies": {
+    "@aws-sdk/types": "*",
+    "@smithy/types": "*",
     "@types/aws-lambda": "*",
     "@types/jest": "*",
     "@types/node": "^18",
@@ -37,6 +39,9 @@
     "typescript": "*"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "*",
+    "@aws-sdk/lib-dynamodb": "*",
+    "aws-jwt-verify": "*",
     "ws-api-typescript-runtime": "0.0.0"
   },
   "main": "lib/index.js",

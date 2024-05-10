@@ -74,6 +74,7 @@ export class Infra {
 
         // wsApi
         api.wsApiProject.infrastructure.typescript!.package.packageName,
+        api.wsApiProject.runtime.typescript!.package.packageName,
         api.wsApiProject.handlers.typescript!.package.packageName,
 
         // For lambdas to reuse logic in step function

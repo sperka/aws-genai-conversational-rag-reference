@@ -169,13 +169,13 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/aws-lambda,@types/jest,esbuild,eslint-import-resolver-typescript,eslint-plugin-header,eslint-plugin-import,jest,ts-jest,typescript"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws-sdk/types,@smithy/types,@types/aws-lambda,@types/jest,esbuild,eslint-import-resolver-typescript,eslint-plugin-header,eslint-plugin-import,jest,ts-jest,typescript,@aws-sdk/client-dynamodb,@aws-sdk/lib-dynamodb,aws-jwt-verify"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs esbuild eslint-import-resolver-typescript eslint-plugin-header eslint-plugin-import eslint jest jest-junit projen ts-jest typescript ws-api-typescript-runtime"
+          "exec": "pnpm update @aws-sdk/types @smithy/types @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs esbuild eslint-import-resolver-typescript eslint-plugin-header eslint-plugin-import eslint jest jest-junit projen ts-jest typescript @aws-sdk/client-dynamodb @aws-sdk/lib-dynamodb aws-jwt-verify ws-api-typescript-runtime"
         },
         {
           "exec": "npx projen"

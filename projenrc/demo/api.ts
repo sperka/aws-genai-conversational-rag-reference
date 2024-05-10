@@ -106,6 +106,19 @@ export class Api {
       },
       handlers: {
         languages: [Language.TYPESCRIPT],
+        options: {
+          typescript: {
+            deps: [
+              'aws-jwt-verify',
+              '@aws-sdk/client-dynamodb',
+              '@aws-sdk/lib-dynamodb',
+            ],
+            devDeps: [
+              '@aws-sdk/types',
+              '@smithy/types',
+            ]
+          }
+        }
       },
       library: {
         libraries: [WebSocketLibrary.TYPESCRIPT_WEBSOCKET_HOOKS],
