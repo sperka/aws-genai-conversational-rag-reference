@@ -10,6 +10,9 @@ operation SendChatMessage {
         chatId: String
 
         @required
+        tmpMessageId: String
+
+        @required
         question: String
 
         // Options to customize/configure chat engine

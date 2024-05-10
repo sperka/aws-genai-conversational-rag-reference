@@ -16,7 +16,10 @@ enum InferenceOperation {
 operation UpdateInferenceStatus {
     input := with [ChatIdMixin] {
         @required
-        operation: InferenceOperation
+        operation: String
+
+        @required
+        updatedAt: EpochTimestamp
 
         // optional status
         status: String

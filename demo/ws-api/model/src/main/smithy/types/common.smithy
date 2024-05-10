@@ -5,6 +5,9 @@ namespace com.amazon
 /// A type for any object
 document Any
 
+/// Timestamp as milliseconds from epoch
+long EpochTimestamp
+
 // List of strings
 list Strings {
     member: String
